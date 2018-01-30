@@ -1,0 +1,4 @@
+This project is a stock market tracker application.
+
+
+
