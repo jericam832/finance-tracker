@@ -1,8 +1,8 @@
-<h1>My Portfolio</h1>
+<h1>My Stock Portfolio</h1>
 
 <%#= link_to "logout", destroy_user_session_path, method: :delete %>
-
-<h3>Search for Stocks</h3>
+<hr>
+<h4>Search for Stocks</h4>
 <div id="stock-lookup">
     <%= form_tag search_stocks_path, remote: true, method: :get, id: "stock-lookup-form" do %>
         <div class="form-group row no-padding text-center col-md-12">
