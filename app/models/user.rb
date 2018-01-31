@@ -5,6 +5,11 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   has_many :user_stocks
   has_many :stocks, through: :user_stocks
+  
+  def full_name
+    return "#{first_name} #{last_name}".strip if (first_name || last_name)
+    "Anonymous"
+  end
 
 # Looks at table to see if user already has stock that matches they are trying to track
   def stock_already_added?(ticker_symbol)
