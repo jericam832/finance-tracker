@@ -1,0 +1,25 @@
+<h1>My Friends</h1>
+
+<%#= link_to "logout", destroy_user_session_path, method: :delete %>
+<hr>
+<h4>Search for Friends</h4>
+<div id="friends-lookup">
+    <%= form_tag search_friends_path, remote: true, method: :get, id: "friend-lookup-form" do %>
+        <div class="form-group row no-padding text-center col-md-12">
+            <div class="col-md-10">
+                <%= text_field_tag :search_param, params[:search_param], placeholder: "Enter a Name or Email", autofocus: true,
+                                    class: "form-control search-box input-lg" %>
+            </div>
+            <div class="col-md-2">
+                <%= button_tag(type: :submit, class: "btn btn-success btn-lg") do %>
+                <i class="fa fa-search"></i> Search
+                <% end %>
+            </div>
+            
+        </div>
+    <% end %>
+</div>
+
+<div id="results">
+    <%= render 'friends/result' %>
+</div>

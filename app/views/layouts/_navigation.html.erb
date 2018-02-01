@@ -1,4 +1,4 @@
- <div class="navbar navbar-inverse navbar-static-top">
+ <div class="navbar navbar-default navbar-static-top">
     <div class="container">
         <%= link_to "Financial Tracker", root_path, class: "navbar-brand" %>
         <% if current_user %>
@@ -11,11 +11,11 @@
             <ul class="nav navbar-nav col-md-6">
               <li><%= link_to "My Portfolio", my_portfolio_path %></li>
               <li><%= link_to "My Profile", edit_registration_path(current_user) %></li>
-              <li><%= link_to "Link3", "/path3"  %></li>
+              <li><%= link_to "My Friends", my_friends_path  %></li>
             </ul>
             <ul class="nav navbar-right col-md-4">
               <li class="col-md-8 user-name text-right">
-                <i class="fa fa-user"></i>
+                <i class="fa fa-user"></i> &nbsp;
                 <%= current_user.full_name.present? ? current_user.full_name : current_user.email %>
               </li>  
               <li class="col-md-4 logout">

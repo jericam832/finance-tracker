@@ -34,37 +34,45 @@ body {
 .logout {
     padding-left: 0;
 }
-
 .user-name {
     padding-top: 15px;
     color: #fff;
 }
-body > div.navbar.navbar-inverse.navbar-static-top {
+
+body > div.navbar.navbar-default.navbar-static-top {
     box-shadow: 0px 0px 5px rgba(0,0,0,.1);
 }
-.navbar-inverse .navbar-nav>li>a,
-body > div.navbar.navbar-inverse.navbar-static-top > div > a {
+.navbar-default .navbar-nav>li>a {
     color: #fff;
-    border-right: #fff solid 1px;
+    // border-right: #636e72 solid 1px;
 }
-body > div.navbar.navbar-inverse.navbar-static-top > div > a {
+body > div.navbar.navbar-default.navbar-static-top > div > a {
     font-size: 24px;
+    color: #fff;
 }
-.navbar-inverse .navbar-nav>li>a:hover {
-    background-color: lighten(#2d3436, 5%) !important;
+body > div.navbar.navbar-default.navbar-static-top {
+    background: #e17055;
+}
+
+
+.navbar-default .navbar-nav>li>a:hover {
+    background-color: lighten(#e17055, 5%) !important;
 }
 .nav.navbar-right li {
     .btn {
         color: #fff !important;
         margin-top: 5%;
+        margin-bottom: 5%;
         font-size: 14px;
     }
     .btn-danger:hover {
-        background-color: darken(#d9534f, 20%) !important;
+        background-color: darken(#d63031, 20%) !important;
     }
 }
 
-.btn, .input-lg {
+.btn, 
+.input-lg, 
+.label-primary {
     border-radius: 0;
 }
 #footer {
